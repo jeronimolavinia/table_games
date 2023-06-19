@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import TableItens from './src/table_itens';
 
 
+
 export default function App() {
 
   const [departures, setDeparture] = useState<TableItens[]>([]);
@@ -79,7 +80,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Resultado da rodada</Text>
+      
+      <Text style={styles.title}>PLACAR DA RODADA</Text>
       <FlatList
         data={departures}
         keyExtractor={(item) => item.partida_id.toString()}
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    backgroundColor: '#8B0000',
+    backgroundColor: '#663399',
 
   },
   title: {
@@ -103,17 +105,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     alignItems: 'center',
-    marginTop: 80
+    marginTop:60,
 
   },
   card: {
     backgroundColor: '#fff',
-    width: '90%',
+    width: 350,
     height: 140,
     borderRadius: 10,
     margin:20,
     alignItems: 'center',
-    marginTop:80
+    marginTop:20,
   },
   item: {
     flexDirection: 'row',
@@ -124,16 +126,16 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     marginHorizontal: 10,
-    margin:10
+    margin:10,
   },
   team_shieldContainer: {
     alignItems:'center',
-    margin:5
+    margin:5,
   },
   text: {
     fontWeight: '700',
     fontSize: 15,
-    margin:5
+    margin:5,
   }
 
 });
