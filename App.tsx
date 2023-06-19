@@ -56,6 +56,7 @@ export default function App() {
   const renderDeparture = ({ item }: { item:TableItens }) => (
 
       <View style={styles.card}>
+        
         <View style={styles.item}>
 
         <View style={styles.team_shieldContainer}>
@@ -72,20 +73,20 @@ export default function App() {
           <Text style={styles.text}>{item.time_visitante.nome_popular}</Text>
         </View>
         </View>
-
       </View>
-
   );
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>PLACAR DA RODADA</Text>
+      <Text style={styles.title1}>COPA DO BRASIL</Text>
       <FlatList
         data={departures}
         keyExtractor={(item) => item.partida_id.toString()}
         renderItem={renderDeparture}
       />
       <StatusBar style="auto" />
+      <Text style={styles.title2}>LIBERTADORES</Text>
+      <Text style={styles.title3}>BRASILEIRÃO</Text>
     </View>
   );
 }
@@ -98,23 +99,40 @@ const styles = StyleSheet.create({
     backgroundColor: '#663399',
 
   },
-  title: {
+  title1: {
     color: '#fff',
     fontSize: 20,
     fontWeight: '700',
     alignItems: 'center',
-    marginTop: 60,
+    marginTop: 35,
 
   },
+
+  title2:{
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: '700',
+    alignItems: 'center',
+   top:-385,
+},
+  title3:{
+      color: '#fff',
+      fontSize: 20,
+      fontWeight: '700',
+      alignItems: 'center',
+     top:-220,
+  },
+
   card: {
     backgroundColor: '#fff',
     width: 350,
     height: 150,
     borderRadius: 10,
-    margin:10,
+    margin:25,
     alignItems: 'center',
-    marginTop:20
+    marginTop:20,
   },
+
   item: {
     flexDirection: 'row',
     alignItems:'center',
