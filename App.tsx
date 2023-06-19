@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import TableItens from './src/table_itens';
 
 
-
 export default function App() {
 
   const [departures, setDeparture] = useState<TableItens[]>([]);
@@ -60,7 +59,7 @@ export default function App() {
         <View style={styles.item}>
 
         <View style={styles.team_shieldContainer}>
-          <Image style={styles.team_shield} source={{ uri: item.time_mandante.escudo }} />
+          <Image contentFit="fill" style={styles.team_shield} source={{ uri: item.time_mandante.escudo }} />
           <Text style={styles.text}>{item.time_mandante.nome_popular}</Text>
         </View>
 
@@ -69,7 +68,7 @@ export default function App() {
           <Text style={styles.text}>{item.placar_visitante}</Text>
         
         <View style={styles.team_shieldContainer}>
-          <Image style={styles.team_shield} source={{ uri: item.time_visitante.escudo.toString() }} />
+          <Image contentFit="fill" style={styles.team_shield} source={{ uri: item.time_visitante.escudo.toString() }} />
           <Text style={styles.text}>{item.time_visitante.nome_popular}</Text>
         </View>
         </View>
@@ -80,7 +79,6 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      
       <Text style={styles.title}>PLACAR DA RODADA</Text>
       <FlatList
         data={departures}
@@ -105,17 +103,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     alignItems: 'center',
-    marginTop:60,
+    marginTop: 60,
 
   },
   card: {
     backgroundColor: '#fff',
     width: 350,
-    height: 140,
+    height: 150,
     borderRadius: 10,
-    margin:20,
+    margin:10,
     alignItems: 'center',
-    marginTop:20,
+    marginTop:20
   },
   item: {
     flexDirection: 'row',
@@ -126,16 +124,16 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     marginHorizontal: 10,
-    margin:10,
+    margin:10
   },
   team_shieldContainer: {
     alignItems:'center',
-    margin:5,
+    margin:5
   },
   text: {
     fontWeight: '700',
     fontSize: 15,
-    margin:5,
+    margin:5
   }
 
 });
