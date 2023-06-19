@@ -10,6 +10,7 @@ export default function App() {
   const [departures, setDeparture] = useState<TableItens[]>([]);
 
   useEffect(() => {
+    // O useEffect vai acessar a API
     var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer test_2d6a35cfcb7c41a923e4146efe9cce");
 
@@ -101,26 +102,27 @@ const styles = StyleSheet.create({
   },
   title1: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 12,
     fontWeight: '700',
     alignItems: 'center',
     marginTop: 35,
+    top: 15,
 
   },
 
   title2:{
     color: '#fff',
-    fontSize: 20,
+    fontSize: 12,
     fontWeight: '700',
     alignItems: 'center',
-   top:-385,
+   top:-405,
 },
   title3:{
       color: '#fff',
-      fontSize: 20,
+      fontSize: 12,
       fontWeight: '700',
       alignItems: 'center',
-     top:-220,
+     top:-225,
   },
 
   card: {
