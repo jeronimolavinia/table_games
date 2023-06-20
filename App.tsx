@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    backgroundColor: '#663399',
+    backgroundColor: '#4B0082',
 
   },
   title1: {
@@ -131,9 +131,9 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 10,
     borderBottomWidth: 7,
-    borderBottomColor:'#C0C0C0',
+    borderBottomColor:'#7B68EE',
     borderEndWidth:7,
-    borderEndColor:'#C0C0C0',
+    borderEndColor:'#7B68EE',
     margin:25,
     alignItems: 'center',
     marginTop:20,
